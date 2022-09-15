@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    background-color: rgb(240, 164, 136);
+    align-items: center;
+    padding: 30px;
+    box-shadow: 0px 0px 5px 5px #54b3d6;
+}
+.botonNav {
+    font-size: 25px;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    margin: 10px;
+    padding-right: 10px;
+    color: #000;
+    font-weight: 800;
+}
+.botonNav:hover {
+    color: rgb(6, 21, 233);
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 110px;
+    margin-right: 20px;
+}
