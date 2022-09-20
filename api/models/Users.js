@@ -6,7 +6,12 @@ const bcrypt = require("bcrypt");
 
 class Users extends Sequelize.Model {
     hash(password,salt) {
-        return bcrypt.hash(password,salt)
+        return bcrypt.hash(password,salt);
+    }
+
+    validatePassword (password) {
+        return this.hash(password,this.salt)
+        .then((newHash)=>newHash === this.password)
     }
 }
 
@@ -30,6 +35,10 @@ Users.init (
         },
         salt : {
             type : Sequelize.STRING,
+        },
+        isAdmin :{
+            type: Sequelize.BOOLEAN,
+            defaultValue :false,
         },
     },
     {sequelize:db,modelName:"users"}
