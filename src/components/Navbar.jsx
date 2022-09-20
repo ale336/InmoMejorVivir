@@ -3,6 +3,8 @@ import "./Navbar.css";
 import { Link } from 'react-router-dom'
 import FormRegister from './FormRegister';
 const image = require("./logoInmo.png");
+
+
 const Navbar = () => {
   
 return (
@@ -19,6 +21,9 @@ return (
         </Link>
         <Link to="/register">
             <button className='botonNav'>REGISTRAR</button>
+        </Link>
+        <Link to="/logout">
+            <button className='botonNav'>SALIR</button>
         </Link>
     </nav>
     </header>
