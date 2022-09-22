@@ -7,23 +7,31 @@ class Units extends Sequelize.Model {}
 
 Units.init (
     {
-        name : {
-            type : Sequelize.STRING,
-            allowNull : false,
-        },
-        district : {
+        address : {
             type : Sequelize.STRING,
             allowNull: false,
         },
-        qty_rooms : {
-            type:Sequelize.INTEGER,
+        superficie : {
+            type : Sequelize.INTEGER,
+            allowNull: false,
+        },
+        description : {
+            type:Sequelize.STRING(500),
             allowNull: false,
         },
         price : {
             type: Sequelize.INTEGER,
             allowNull: false,
         },
-        image: {
+        image1: {
+            type:Sequelize.STRING,
+            allowNull: false,
+        },
+        image2: {
+            type:Sequelize.STRING,
+            allowNull: false,
+        },
+        image3: {
             type:Sequelize.STRING,
             allowNull: false,
         },
