@@ -1,8 +1,13 @@
-body {
+/* body {
     background-image: url("https://turismoushuaia.com/wp-content/uploads/2018/12/ABW4036-1-1024x684.jpg") ;
     background-size: cover;
     background-image: center;
+} */
+body {
+    margin: 0;
+    padding: 0;
 }
+
 .App {
   text-align: center;
 }
