@@ -1,0 +1,14 @@
+.UnitCard {
+    list-style: none;
+    font-size: 30px;
+    color: rgba(219, 38, 25, 0.87);
+    text-align: center;
+}
+.UnitCard:hover{
+    opacity: 0.7;
+}
+
+.UnitImg {
+    
+    border-radius: 10px;
+}

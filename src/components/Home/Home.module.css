@@ -1,0 +1,16 @@
+.grilla {
+    display:grid;
+    align-items: flex-start;
+    grid-template-columns: repeat(auto-fill , 600px);
+    gap: 40px;
+    padding: 50px;
+    justify-content: center;
+    
+}
+
+h4 {
+    text-align: center;
+    color: rgb(238, 10, 10);
+    margin-top: 50px;
+    font-size: 40px;
+}
