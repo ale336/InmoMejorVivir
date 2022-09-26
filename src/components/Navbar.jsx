@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import Search from "./Search";
 const image = require("./logoInmo.png");
 
 
@@ -21,6 +22,9 @@ const Navbar = () => {
           aria-label="Toggle navigation"
         ><span class="navbar-toggler-icon"></span>
         </button>
+
+        <Search />
+
         <nav>
         <div className="collapse navbar-collapse" id="navbarNav">
           <Link to="/login">
@@ -31,7 +35,10 @@ const Navbar = () => {
           {" "}
           
           <Link to="/register">
-          <button className="btn btn-sm links-navbar" type="button">
+          <button 
+            className="btn btn-sm links-navbar" 
+            type="button"
+            >
             REGISTRAR
           </button>
           </Link>  

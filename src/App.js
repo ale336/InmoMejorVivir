@@ -9,19 +9,20 @@ import Sidebar from './components/Sidebar';
 
 function App() {  
     return (
-    <div>
+    <div> 
         <Navbar/>
-        <Sidebar/>
+        <Home />
         <Routes>
             <Route path='/home' element ={<Home/>}/>
             <Route path='/register' element={<FormRegister/>}/>
             <Route path='/login' element ={<FormLogin/>}/>
         </Routes>
+        <div className="footer">
+            <p>INMOBILIARIA  MEJOR  VIVIR - USHUAIA - TIERRA DEL FUEGO</p>
+        </div>
+     
     </div>
     );
-}
-
-
-
+    }
 export default App;
 
