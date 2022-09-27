@@ -20,7 +20,7 @@ app.get("/",function(req,res) {
     res.send("Hola Mundo!")
 });
 
-db.sync({force : true})
+db.sync({force : false})
 .then(function(){
     app.listen(3001, () => {
         console.log('Servidor corriendo en el puerto 3001')

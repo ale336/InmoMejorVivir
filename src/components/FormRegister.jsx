@@ -1,7 +1,7 @@
-import React from "react"
-import axios from "axios"
-import { useState} from "react"
-
+import React from "react";
+import axios from "axios";
+import { useState} from "react";
+import  "./FormRegister.css";
 
 const FormRegister = () => {
 
@@ -38,7 +38,7 @@ const FormRegister = () => {
             <div>
                 <label>Nombre</label>
                 <input 
-                    className="entradas" 
+                     
                     type="text" 
                     placeholder="Ingrese su nombre" 
                     onChange={handleNameChange} 
@@ -48,7 +48,7 @@ const FormRegister = () => {
             <div>
                 <label>Apellido</label>
                 <input 
-                    className="entradas" 
+                    
                     type="text"  
                     placeholder="Ingrese su apellido" 
                     onChange={handleLastnameChange} 
@@ -58,7 +58,7 @@ const FormRegister = () => {
             <div>
                 <label>E-mail</label>
                 <input 
-                    className="entradas" 
+                   
                     type="email" 
                     placeholder="Ingrese su e-mail" 
                     onChange={handleEmailChange} 
@@ -68,7 +68,7 @@ const FormRegister = () => {
             <div>
             <label>Password</label>
             <input 
-                className="entradas" 
+                 
                 type="password" 
                 placeholder="Ingrese su password" 
                 onChange={handlePasswordChange} 
