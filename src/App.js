@@ -4,18 +4,25 @@ import {Routes,Route} from "react-router-dom"
 import FormRegister from './components/FormRegister';
 import FormLogin from './components/FormLogin';
 import Home from './components/Home/Home';
-import Sidebar from './components/Sidebar';
+import Casas from './components/UnitsXCate/Casas';
+import Deptos from './components/UnitsXCate/Deptos';
+import Duplex from './components/UnitsXCate/Duplex';
+import Local from './components/UnitsXCate/Local';
 
 
 function App() {  
     return (
     <div> 
         <Navbar/>
-        <Home />
+        {/* <Home /> */}
         <Routes>
-            <Route path='/home' element ={<Home/>}/>
+            <Route path='/' element ={<Home/>}/>
             <Route path='/register' element={<FormRegister/>}/>
             <Route path='/login' element ={<FormLogin/>}/>
+            <Route path='/Casa' element={<Casas />}></Route>
+            <Route path='/Departamentos' element={<Deptos />}></Route>
+            <Route path='/Dúplex' element={<Duplex />}></Route>
+            <Route path='/Locales' element={<Local />}></Route>
         </Routes>
         <div className="footer">
             <p>INMOBILIARIA  MEJOR  VIVIR - USHUAIA - TIERRA DEL FUEGO</p>

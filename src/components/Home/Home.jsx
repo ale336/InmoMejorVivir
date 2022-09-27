@@ -3,11 +3,12 @@ import { UnitsCards } from "./UnitsCards";
 import styles from "./Home.module.css";
 import { FcBinoculars } from "react-icons/fc";
 
+
 const Home = () => {
   const unidadesHome = [
     {
       id: 1,
-      categoria: "Casas",
+      categoria: "Casa",
       imagen:
         "http://planosdecasasmodernas.com/wp-content/uploads/2015/10/Plano-de-casa-sencilla-de-2-dormitorios.jpg",
     },
@@ -25,18 +26,18 @@ const Home = () => {
     },
     {
       id: 4,
-      categoria: "Locales Comerciales",
+      categoria: "Locales",
       imagen:
         "https://www.busquetsgalvez.com/web/wp-content/uploads/2017/07/escaparate-local-comercial-1.jpg",
     },
   ];
-  console.log(unidadesHome);
-  
+  // console.log(unidadesHome);
+
   return (
     <div>
       <h4><FcBinoculars/> ¿ QUÉ ESTAS BUSCANDO ? <FcBinoculars/></h4>
     
-      <ul className={styles.grilla}>
+      <ul className={styles.grilla} >
         {unidadesHome.map((unidad) => (
           <UnitsCards key={unidad.id} unidad={unidad} />
         ))}
