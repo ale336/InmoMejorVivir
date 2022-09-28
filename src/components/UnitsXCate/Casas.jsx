@@ -7,14 +7,14 @@ const Casas = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/api/categorias/Casa")
+      .get("http://localhost:3001/api/categorias/Casa") 
       .then((res) => setCasa(res.data));
   }, []);
 
   return (
     <div>
       {casa.length ? (
-        casa.map((item) => {
+        casa.map((item) => { 
           return (
             <TarjetaUnit
               address={item.address}

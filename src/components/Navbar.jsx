@@ -1,13 +1,12 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import Search from "./Search";
-const image = require("./logoInmo.png");
 
+const image = require("./logoInmo.png");
 
 const Navbar = () => {
   return (
-   <nav class="navbar navbar-expand-lg color-navbar">
+    <nav class="navbar navbar-expand-lg color-navbar">
       <div class="container-fluid">
         <Link to="/">
           <img src={image} width="250px" alt="logo inmobiliaria"></img>
@@ -20,40 +19,36 @@ const Navbar = () => {
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
-        ><span class="navbar-toggler-icon"></span>
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
 
-        <Search />
-
         <nav>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <Link to="/login">
-            <button className="btn btn-sm  links-navbar" type="button">
-              INGRESAR
-            </button>
-          </Link>
-          {" "}
-          
-          <Link to="/register">
-          <button 
-            className="btn btn-sm links-navbar" 
-            type="button"
-            >
-            REGISTRAR
-          </button>
-          </Link>  
-        </div>
-        </nav> 
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <Link to="/search">
+              <button className="btn btn-sm  links-navbar" type="button">
+                BUSCAR
+              </button>
+            </Link>
+            <Link to="/login">
+              <button className="btn btn-sm  links-navbar" type="button">
+                INGRESAR
+              </button>
+            </Link>
+
+            <Link to="/register">
+              <button className="btn btn-sm links-navbar" type="button">
+                REGISTRAR
+              </button>
+            </Link>
+          </div>
+        </nav>
       </div>
-    </nav>  
+    </nav>
   );
 };
 
 export default Navbar;
-
-
-  
-
 
 // <header>
 //     <div className='logo'>
@@ -76,7 +71,6 @@ export default Navbar;
 //         </Link>
 //     </nav>
 //     </header>
-
 
 /* <nav class="navbar navbar-light bg-light">
 <div class="container">
