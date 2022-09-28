@@ -4,6 +4,11 @@ const userRouter = express.Router();
 const {generateToken , validateToken} = require("../config/tokens");
 const { validateAuth } = require("../middlewares/auth");
 
+userRouter.get("/all", (req,res) =>{
+    Users.findAll(req.body)
+        .then((users) => res.send(users));
+});
+
 
 userRouter.post("/register", (req,res) =>{
     Users.create(req.body)
