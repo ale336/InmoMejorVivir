@@ -1,5 +1,5 @@
 const express = require("express");
-const { Users } = require("../models");
+const { Users, Favoritos } = require("../models");
 const userRouter = express.Router();
 const {generateToken , validateToken} = require("../config/tokens");
 const { validateAuth } = require("../middlewares/auth");
@@ -57,6 +57,26 @@ userRouter.post("/logout", (req,res) => {
     res.clearCookie("token");
 
     res.sendStatus(204);//No Content , se hizo la tarea, nada que responder.
+});
+
+
+//FAVORITOS
+
+//CREAR FAVORITOS
+
+userRouter.post("/favoritos", (req,res)=>{
+    const { usersId , unit} = req.body;
+    Favoritos.create({
+        idUnit : unit.id,
+    })
+    .then((unit)=>{
+        Users.findOne({where : {id : usersId}})
+        .then((user)=>{
+            user.addFavorites(unit, {through:"favoritos"});
+            res.sendStatus(200)
+        })
+        .catch((e)=>console.log(e));
+    });
 });
 
 
