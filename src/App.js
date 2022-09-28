@@ -9,12 +9,15 @@ import Deptos from './components/UnitsXCate/Deptos';
 import Duplex from './components/UnitsXCate/Duplex';
 import Local from './components/UnitsXCate/Local';
 
+import Search from './components/Search';
+
 
 function App() {  
     return (
     <div> 
         <Navbar/>
         {/* <Home /> */}
+        <div>
         <Routes>
             <Route path='/' element ={<Home/>}/>
             <Route path='/register' element={<FormRegister/>}/>
@@ -23,7 +26,9 @@ function App() {
             <Route path='/Departamentos' element={<Deptos />}></Route>
             <Route path='/Dúplex' element={<Duplex />}></Route>
             <Route path='/Locales' element={<Local />}></Route>
+            <Route path='/search' element={<Search/>}></Route>
         </Routes>
+        </div>
         <div className="footer">
             <p>INMOBILIARIA  MEJOR  VIVIR - USHUAIA - TIERRA DEL FUEGO</p>
         </div>

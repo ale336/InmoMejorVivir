@@ -10,7 +10,7 @@
     margin: 20px;
     border-radius: 8px;
     overflow: hidden;
-    background: rgb(245, 243, 239);
+    background: rgb(240, 231, 212);
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
     cursor: default;
 }
@@ -24,9 +24,12 @@
 
 .cardUnidades h2 {
     text-align: center;
-    padding: 10px;
+    padding: 0;
     margin-top: 5px;
 }
-.btn btn-outline-danger {
-    
+
+.cardUnidades h3 {
+    text-align: center;
+    padding: 0;
+    margin-top: 0;
 }
