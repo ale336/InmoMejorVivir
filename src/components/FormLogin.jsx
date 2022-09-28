@@ -21,16 +21,17 @@ const FormLogin = () => {
             .post("http://localhost:3001/api/users/login",{email,password})
             .then((res)=>res.data)
             .then((data)=>{navigate("/")})
+            .then(alert(`Bienvenida/o ${email}`));
         }
 
     return (
     <div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="formulario">
             <h3>INGRESA A TU PERFIL</h3>
             <div>
                 <label>E-mail</label>
                 <input 
-                    className="entradas" 
+                   
                     type="email" 
                     placeholder="Ingrese su e-mail" 
                     onChange={handleEmailChange} 
@@ -40,7 +41,7 @@ const FormLogin = () => {
             <div>
             <label>Password</label>
             <input 
-                className="entradas" 
+                 
                 type="password" 
                 placeholder="Ingrese su password" 
                 onChange={handlePasswordChange} 
@@ -48,9 +49,9 @@ const FormLogin = () => {
             </input>
             </div>
             <button 
-                className='boton' 
                 type="submit" 
-                value="Ingresar">INGRESAR</button>
+                value="Ingresar">
+                INGRESAR</button>
         </form>
     </div>
   )
