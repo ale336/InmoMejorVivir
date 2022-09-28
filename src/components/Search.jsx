@@ -31,7 +31,7 @@ const Search = () => {
             placeholder="Zona preferida"
             aria-label="Search"
             onChange={handleSearch}
-            value={busqueda}
+            value={busqueda}  
           ></input>
            
             <button 
