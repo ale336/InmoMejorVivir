@@ -33,7 +33,7 @@ const FormRegister = () => {
 
     return (
     <div className="App">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="formulario">
             <h3>Registro de Usuarios</h3>
             <div>
                 <label>Nombre</label>
@@ -76,7 +76,7 @@ const FormRegister = () => {
             </input>
             </div>
             <button 
-                className='boton' 
+                
                 type="submit" 
                 value="Registrar">REGISTRAR</button>
         </form>

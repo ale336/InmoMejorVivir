@@ -2,9 +2,17 @@ import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
+
 const image = require("./logoInmo.png");
 
 const Navbar = () => {
+
+//   const getUser =() =>{
+//     axios.get("http://localhost:3001/api/users/me")
+//     .then((res)=>res.data)
+//     .then((user)=>console.log(user)); 
+// }
+
   return (
     <nav class="navbar navbar-expand-lg color-navbar">
       <div class="container-fluid">
@@ -30,12 +38,12 @@ const Navbar = () => {
                 BUSCAR
               </button>
             </Link>
-            <Link to="/login">
+              <Link to="/login">
               <button className="btn btn-sm  links-navbar" type="button">
                 INGRESAR
               </button>
             </Link>
-
+            
             <Link to="/register">
               <button className="btn btn-sm links-navbar" type="button">
                 REGISTRAR
