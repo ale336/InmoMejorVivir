@@ -9,6 +9,7 @@ import Deptos from './components/UnitsXCate/Deptos';
 import Duplex from './components/UnitsXCate/Duplex';
 import Local from './components/UnitsXCate/Local';
 
+
 import Search from './components/Search';
 
 
@@ -27,6 +28,7 @@ function App() {
             <Route path='/Dúplex' element={<Duplex />}></Route>
             <Route path='/Locales' element={<Local />}></Route>
             <Route path='/search' element={<Search/>}></Route>
+            
         </Routes>
         </div>
         <div className="footer">

@@ -11,6 +11,17 @@ unitsRouter.post("/newunit", (req, res)=>{
     })
 });
 
+
+//RUTA PARA ELIMINAR UNA UNIDAD
+
+unitsRouter.delete("/delete/:id", (req, res)=>{
+    Units.destroy({
+        where :{id : req.params.id}
+    })
+    res.sendStatus(202);
+});
+
+
 //RUTA PARA MOSTRAR TODAS LAS UNIDADES
 unitsRouter.get("/all" , (req,res)=> {
     Units.findAll()
