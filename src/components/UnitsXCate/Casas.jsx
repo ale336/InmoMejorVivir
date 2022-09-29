@@ -17,6 +17,7 @@ const Casas = () => {
         casa.map((item) => { 
           return (
             <TarjetaUnit
+              key={item.id}
               address={item.address}
               img={item.image1}
               type_unit={item.type_unit}
