@@ -8,8 +8,8 @@ import Casas from './components/UnitsXCate/Casas';
 import Deptos from './components/UnitsXCate/Deptos';
 import Duplex from './components/UnitsXCate/Duplex';
 import Local from './components/UnitsXCate/Local';
-
 import Search from './components/Search';
+import DetailsUnits from './components/Cards/DetailsUnits';
 
 
 function App() {  
@@ -27,6 +27,7 @@ function App() {
             <Route path='/Dúplex' element={<Duplex />}></Route>
             <Route path='/Locales' element={<Local />}></Route>
             <Route path='/search' element={<Search/>}></Route>
+            <Route path='/details' element={<DetailsUnits/>}></Route>
         </Routes>
         </div>
         <div className="footer">

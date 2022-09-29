@@ -1,5 +1,5 @@
 const express = require("express");
-const { Users, Favoritos } = require("../models");
+const { Users, Units } = require("../models");
 const userRouter = express.Router();
 const {generateToken , validateToken} = require("../config/tokens");
 const { validateAuth } = require("../middlewares/auth");
@@ -65,25 +65,50 @@ userRouter.post("/logout", (req,res) => {
 });
 
 
-//FAVORITOS
-
+//
 //CREAR FAVORITOS
 
-userRouter.post("/favoritos", (req,res)=>{
-    const { usersId , unit} = req.body;
-    Favoritos.create({
-        idUnit : unit.id,
+userRouter.put("/:id", (req, res) => {
+    const unit_id = req.params.id;
+    const users_id = req.body.id;
+    //console.log(unit_id,users_id);
+    Users.findByPk(users_id).then((user)=>{
+        
+      Units.findByPk(unit_id)
+      .then((house)=>{
+        user.addUnits(house)
+      })
+      res.sendStatus(204);
+});
+});
+
+//BORRAR FAVS
+
+userRouter.delete("/:id", (req, res) => {
+    const unit_id = req.params.id;
+    const users_id = req.body.id;
+    //console.log(unit_id,users_id);
+    Users.findByPk(users_id).then((user)=>{
+        
+      Units.findByPk(unit_id)
+      .then((house)=>{
+        user.removeUnits(house)
+      })
+      res.sendStatus(204);
+});
+});
+
+//MOSTRAR FAVS
+
+userRouter.get("/allfavs/:id", (req,res)=>{
+    const users_id = req.params.id;
+    Users.findByPk(users_id)
+    .then(async(user)=>{
+        const results = await user.getUnits()
+        res.send(results);
     })
-    .then((unit)=>{
-        Users.findOne({where : {id : usersId}})
-        .then((user)=>{
-            user.addFavorites(unit, {through:"favoritos"});
-            res.sendStatus(200)
-        })
-        .catch((e)=>console.log(e));
-    });
 });
 
 
-module.exports = userRouter;
 
+module.exports = userRouter;
