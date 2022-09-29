@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express(); 
 const db = require("./config/db");
-const models = require("./models");
+require("./models");
 const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
 const cors = require("cors");
