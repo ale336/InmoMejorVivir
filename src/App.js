@@ -8,6 +8,7 @@ import Casas from './components/UnitsXCate/Casas';
 import Deptos from './components/UnitsXCate/Deptos';
 import Duplex from './components/UnitsXCate/Duplex';
 import Local from './components/UnitsXCate/Local';
+
 import Search from './components/Search';
 import DetailsUnits from './components/Cards/DetailsUnits';
 
